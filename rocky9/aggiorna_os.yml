@@ -1,0 +1,10 @@
+---
+- name: Intro to Ansible Playbooks
+  hosts: all
+
+  tasks:
+  - name: Upgrade all apt packages
+    yum:
+        name: '*'
+        state: latest
+        update_cache: yes
